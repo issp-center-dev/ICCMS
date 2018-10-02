@@ -7,6 +7,7 @@
 			- eigenkernel (sample program)
 			- k-ep (sample program)
 			- doc\_how\_to\_use\_each\_program_code.zip
+			- Handson\_practice\_intro.pdf
 	-  hoshi
 		- slide\_hoshi\_pcoms\_2018\_10\_02\_lt.pdf (lecture slide)
 	- misawa
