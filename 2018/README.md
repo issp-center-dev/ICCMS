@@ -4,6 +4,7 @@ A purpose of this camp is to learn  the advanced computational algorithms implem
 In this camp, the participants can learn details of the algorithms in group exercises. It is also possible to utilize the advanced algorithms for solving their own research subjects. Invited lecturers will talk about needs in the condensed matter physics and show recent examples of the cooperations between applied mathematics and physics.
 The participants discuss the possibilities of the cooperations between applied mathematics and the computational materials science. In addition, they can learn innovation minds from discussions with lecturers, who are active in industry, government, schools and various academic fields.
 
+# Folder structure
 - 2018-10-02 
 	-  fukuda
 		- MateriApps\_review\_template.zip
