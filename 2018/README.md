@@ -16,7 +16,7 @@ The participants discuss the possibilities of the cooperations between applied m
 	-  hoshi
 		- slide\_hoshi\_pcoms\_2018\_10\_02\_lt.pdf (lecture slide)
 	- misawa
-		- to be uploaded (lecture slide)
+		- misawa\_18Oct\_IC.pdf (lecture slide)
 - 2018-10-03
 - 2018-10-04   
 - templates
