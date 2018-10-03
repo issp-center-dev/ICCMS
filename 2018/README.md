@@ -18,6 +18,9 @@ The participants discuss the possibilities of the cooperations between applied m
 	- misawa
 		- misawa\_18Oct\_IC.pdf (lecture slide)
 - 2018-10-03
+	-  todo
+		- pcoms-camp-todo.pdf
+
 - 2018-10-04   
 - templates
 	- review\_template.doc 
