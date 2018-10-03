@@ -20,6 +20,13 @@ The participants discuss the possibilities of the cooperations between applied m
 - 2018-10-03
 	-  todo
 		- pcoms-camp-todo.pdf f (lecture slide)
+	- sogabe
+		- Innovation_camp_No1.ppt (lecture slide)
+		- ani-frac-bend_small.gif
+		- ani-frac-bend_f-qt.avi
+		- 1.avi
+		- 2.avi
+		- 3.avi
 
 - 2018-10-04   
 - templates
