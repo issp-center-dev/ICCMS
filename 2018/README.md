@@ -28,7 +28,13 @@ The participants discuss the possibilities of the cooperations between applied m
 		- 2.avi
 		- 3.avi
 
-- 2018-10-04   
+- 2018-10-04 (to ba added)
+  	- Using-software-team
+	- Real-time-evolution-team
+	- Materials-design-team
+	- Numerical-optimization-team
+	- Molecular-dynamics-team
+
 - templates
 	- review\_template.doc 
 	- review\_template\_en.doc 
