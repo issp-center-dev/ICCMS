@@ -12,14 +12,14 @@ The participants discuss the possibilities of the cooperations between applied m
 			- eigenkernel (sample program)
 			- k-ep (sample program)
 			- doc\_how\_to\_use\_each\_program_code.zip
-			- Handson\_practice\_intro.pdf
+			- Handson\_practice\_intro.pdf f (lecture slide)
 	-  hoshi
 		- slide\_hoshi\_pcoms\_2018\_10\_02\_lt.pdf (lecture slide)
 	- misawa
 		- misawa\_18Oct\_IC.pdf (lecture slide)
 - 2018-10-03
 	-  todo
-		- pcoms-camp-todo.pdf
+		- pcoms-camp-todo.pdf f (lecture slide)
 
 - 2018-10-04   
 - templates
