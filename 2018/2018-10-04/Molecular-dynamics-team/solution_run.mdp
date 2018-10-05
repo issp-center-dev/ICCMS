@@ -1,0 +1,49 @@
+; Preprocessing
+title      = production run for solution system
+
+; Run conrol
+integrator = sd
+dt         = 0.002 ; 2 fs
+nsteps     = 500000 ; 100 ps
+
+; Output control
+nstxtcout   =  10
+nstlog      = 100
+
+; Neighbor searching
+nstlist     = 10
+ns_type    = grid
+pbc        = xyz
+rlist      = 1.35
+
+;; Electrostatics
+coulombtype = PME
+rcoulomb    = 1.2
+pme_order   = 6
+fourier_nx = 32
+fourier_ny = 32
+fourier_nz = 32
+
+; VdW
+vdwtype     = Switch
+rvdw_switch = 1.0
+rvdw        = 1.2
+
+; Temperature coupling
+tcoupl      = nose-hoover
+tc_grps     = System
+tau_t       = 1.0
+ref_t       = 300
+
+;; Pressure coupling
+pcoupl      = Parrinello-Rahman
+pcoupltype  = isotropic
+tau_p       = 1.0
+compressibility = 4.5e-5
+ref_p       = 1.0
+
+; Velocity generation
+gen_vel     = no
+
+; Bonds
+constraints = all-bonds
