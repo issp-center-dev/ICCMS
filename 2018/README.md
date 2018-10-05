@@ -27,6 +27,8 @@ The participants discuss the possibilities of the cooperations between applied m
 		- 1.avi
 		- 2.avi
 		- 3.avi
+	- okubo
+		- 2ndICCMS_Okubo.pdf
 
 - 2018-10-04 (to ba added)
   	- Using-software-team
