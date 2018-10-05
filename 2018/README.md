@@ -30,7 +30,7 @@ The participants discuss the possibilities of the cooperations between applied m
 	- okubo
 		- 2ndICCMS_Okubo.pdf
 
-- 2018-10-04 (to ba added)
+- 2018-10-04
   	- Using-software-team
 	- Real-time-evolution-team
 	- Materials-design-team
