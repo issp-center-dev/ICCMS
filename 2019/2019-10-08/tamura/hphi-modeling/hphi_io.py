@@ -62,11 +62,13 @@ class calc_mag:
         for sz in range(L//2 + 1):
             self.input_param["2Sz"] = 2*sz
             self._make_input_file()
-            cmd = "{} -s {}".format(self.path_hphi, self.input_path)
-            subprocess.call(cmd.split())
+            cmd = "{} -s {} > std.log".format(self.path_hphi, self.input_path)
+            #subprocess.call(cmd.split())
+            subprocess.call(cmd, shell=True)
             energy = self._get_energy_from_hphi()
             energy_list.append((sz, energy[0]))
         self.energy_list = energy_list
+        subprocess.call("rm *.def", shell=True)
         return energy_list
 
     def get_mag(self, sz_energy_list, H):
