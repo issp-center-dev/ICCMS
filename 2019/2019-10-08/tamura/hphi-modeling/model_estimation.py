@@ -21,14 +21,13 @@ import combo
 import os
 import urllib
 import matplotlib.pyplot as plt
-#matplotlib inline
 
 #In
 
 import hphi_io as hphi
 
 hphi_cond = {}
-hphi_cond["path_hphi"] = "./HPhi"
+hphi_cond["path_hphi"] = "/home/lctr1/tutorial/HPhi.build/src/HPhi"
 hphi_cond["path_input_file"] = "./stan.in"
 HPhi_calc = hphi.calc_mag(hphi_cond)
 
@@ -77,13 +76,12 @@ target=[]
 for H in magnetic_field:
     target.append(HPhi_calc.get_mag(energy_list, H))
 
-
-fig = plt.figure(figsize=(10, 6))
-plt.plot(magnetic_field,target,'.',label="target")
-plt.xlabel("Magnetic field")
-plt.ylabel("Magnetization")
-plt.legend(loc='lower right')
-plt.show()
+#fig = plt.figure(figsize=(10, 6))
+#plt.plot(magnetic_field,target,'.',label="target")
+#plt.xlabel("Magnetic field")
+#plt.ylabel("Magnetization")
+#plt.legend(loc='lower right')
+#plt.savefig('Target.png', dpi=150)
 
 
 
@@ -125,10 +123,29 @@ class simulator:
         for num in range(300):
             delta_m=delta_m+(HPhi_calc.get_mag(energy_list, magnetic_field[num])-target[num])**2
 
+        delta_m_list.append(delta_m)
+        J1_list.append(X[action][0][0])
+        J2_list.append(X[action][0][1])
+        J3_list.append(X[action][0][2])
+
+
+        print "*********************"
+        print "Present optimum interactions"
+
+        print "J1=",J1_list[np.argmin(np.array(delta_m_list))]
+        print "J2=",J2_list[np.argmin(np.array(delta_m_list))]
+        print "J3=",J3_list[np.argmin(np.array(delta_m_list))]
+
+        print ""
+
 
         return -delta_m
 
 
+delta_m_list=[]
+J1_list=[]
+J2_list=[]
+J3_list=[]
 
 #In
 # Design of policy
@@ -189,15 +206,16 @@ for H in magnetic_field:
     estimated.append(HPhi_calc.get_mag(energy_list, H))
 
 
-fig = plt.figure(figsize=(10, 6))
-plt.plot(magnetic_field,target,'.',label="target")
-plt.plot(magnetic_field,estimated,'.',label="estimated")
-plt.xlabel("Magnetic field")
-plt.ylabel("Magnetization")
-plt.legend(loc='lower right')
-plt.show()
+#fig = plt.figure(figsize=(10, 6))
+#plt.plot(magnetic_field,target,'.',label="target")
+#plt.plot(magnetic_field,estimated,'.',label="estimated")
+#plt.xlabel("Magnetic field")
+#plt.ylabel("Magnetization")
+#plt.legend(loc='lower right')
+#plt.savefig('Estimation_result.png', dpi=150)
 
 
+print "*********************"
 print ''
 print 'Estimated model parameter'
 print 'J1=',X[int(best_action[-1])][0]
@@ -218,7 +236,6 @@ print ''
 # res.total_num_search: total number of search
 print 'f(x)='
 print res.fx[0:res.total_num_search]
-#best_fx, best_action = res.export_all_sequence_best_fx()
 print 'current best'
 print best_fx
 print 'current best action='
