@@ -5,6 +5,7 @@
 2. Install combo by typing following command
 
     ``$ cd sekirei`` 
+    
     ``$ sh install_combo.sh``
 
 3. Move to ``tamura/hphi-modeling`` directory
@@ -19,5 +20,6 @@
 5. Use job script sample_hphi_sekirei.sh in sekirei folder.
 
    ``$ cp ../../script/sekirei/sample_hphi_sekirei.sh .``
+   
    ``$ qsub sample_hphi_sekirei.sh``
    
