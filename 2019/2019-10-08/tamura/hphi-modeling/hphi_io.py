@@ -19,7 +19,8 @@ import os
 class calc_mag:
     def __init__(self, hphi_cond):
         self.input_param = {}
-        self.path_hphi = hphi_cond["path_hphi"]
+        self.mpi_command = hphi_cond["mpi_command"] if "mpi_command" in hphi_cond else ""
+        self.path_hphi = hphi_cond["path_hphi"] 
         self.input_path = hphi_cond["path_input_file"]
         self.input_param["model"] = "Spin"
         self.input_param["method"] = "CG"
@@ -52,6 +53,9 @@ class calc_mag:
                 line1 = line.split()
                 if (line.find("Energy") != -1):
                     energy_list.append(float(line1[1]))
+        else:
+            print("Energy file does not exist.")
+            return None
         return energy_list
 
     def get_energy_by_hphi(self, input_dict):
@@ -62,13 +66,17 @@ class calc_mag:
         for sz in range(L//2 + 1):
             self.input_param["2Sz"] = 2*sz
             self._make_input_file()
-            cmd = "{} -s {} > std.log".format(self.path_hphi, self.input_path)
-            #subprocess.call(cmd.split())
+
+            cmd = "{} {} -s {} > std.log".format(self.mpi_command, self.path_hphi, self.input_path)
             subprocess.call(cmd, shell=True)
+    
             energy = self._get_energy_from_hphi()
+            if energy is None:
+                exit(0)
             energy_list.append((sz, energy[0]))
-        self.energy_list = energy_list
-        subprocess.call("rm *.def", shell=True)
+            self.energy_list = energy_list
+            subprocess.call("rm *.def", shell=True)
+                            
         return energy_list
 
     def get_mag(self, sz_energy_list, H):

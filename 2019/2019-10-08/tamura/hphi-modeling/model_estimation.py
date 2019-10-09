@@ -27,8 +27,10 @@ import matplotlib.pyplot as plt
 import hphi_io as hphi
 
 hphi_cond = {}
-hphi_cond["path_hphi"] = "/home/lctr1/tutorial/HPhi.build/src/HPhi"
-hphi_cond["path_input_file"] = "./stan.in"
+#For sekirei
+#hphi_cond["mpi_command"] = "mpijob"
+hphi_cond["path_hphi"] = "HPhi"
+hphi_cond["path_input_file"] = "stan.in"
 HPhi_calc = hphi.calc_mag(hphi_cond)
 
 
