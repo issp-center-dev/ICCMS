@@ -1,4 +1,5 @@
 #!/bin/bash
+source /home/issp/materiapps/hphi/hphivars.sh
 pip install cython --user
 pip install six --user
 pip install matplotlib --user
