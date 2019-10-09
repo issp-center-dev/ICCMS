@@ -19,5 +19,6 @@
 5. Use job script sample_hphi_sekirei.sh in sekirei folder.
 
    ``$ cp ../../script/sekirei/sample_hphi_sekirei.sh .``
+   
    ``$ qsub sample_hphi_sekirei.sh``
    
