@@ -10,7 +10,6 @@ URL: http://pcoms.issp.u-tokyo.ac.jp/events/eventsfolder/3rd_ICCMS
 ├── 2019-10-08
 │   ├── script
 │   │   ├── README.md
-│   │   ├── README.md~
 │   │   ├── install_HPhi.sh
 │   │   ├── install_combo.sh
 │   │   ├── sample_hphi.sh
